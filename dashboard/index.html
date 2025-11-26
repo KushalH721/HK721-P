@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PMS Demo Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1>Performance Management — Demo Dashboard</h1>
+    <div class="user">Demo User</div>
+  </header>
+
+  <main class="container">
+    <section class="kpis">
+      <div class="card">
+        <div class="card-title">Active Employees</div>
+        <div class="card-value" id="kpi-employees">120</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Goals In Progress</div>
+        <div class="card-value" id="kpi-goals">86</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Pending Reviews</div>
+        <div class="card-value" id="kpi-reviews">23</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Avg Rating</div>
+        <div class="card-value" id="kpi-rating">3.8</div>
+      </div>
+    </section>
+
+    <section class="charts">
+      <div class="chart-card">
+        <h3>Goal Completion by Month</h3>
+        <canvas id="goalsChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3>Ratings Distribution</h3>
+        <canvas id="ratingChart"></canvas>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <h3>Recent Reviews</h3>
+      <table class="table" id="reviewsTable">
+        <thead>
+          <tr><th>Employee</th><th>Manager</th><th>Date</th><th>Rating</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <!-- rows injected by JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
